@@ -1,0 +1,50 @@
+package batchD0454;
+
+public class first {
+
+	public static void main(String[] args) {
+		 int sub1 = 80;
+		 int sub2 = 80;
+		 int sub3 = 80;
+	     int sub4 = 80;
+	     int sub5 = 80;
+	     
+	     int total = (sub1+sub2+sub3+sub4+sub5);    // total calculated
+	     
+	     System.out.println("Total : "+ total);      // printing total
+	     float percentage= (total/5);
+	     //float p = (float)total;                        // typecasting
+	     //float percentage = (float) ((p/500.0)*100.0);
+	     System.out.println("Percentage : "+ percentage);   		
+	}
+}
+
+
+package batchD0454;
+
+public class area {
+	public static void main(String[] args) {
+		// Area of Rectangle 
+		int length = 5;
+		int breadth = 10;
+		int area_rectangle = (length * breadth);
+		System.out.println("Area of Rectangle: "+ area_rectangle );
+		
+		//Area of Triangle
+		float base=4.6f;
+		float height=6.0f;
+		float area_triangle= ((1/2)*(base*height));
+		System.out.println("Area of Triangle: "+area_triangle);
+		
+		//Area of Square
+		int side=7;
+		int area_square=(side*side);
+		System.out.println("Area of Square: "+area_square);
+		
+		//Area of Circle
+		float r=6.9f;
+		float pi=3.14f;
+		float area_circle= (pi*r*r);
+		System.out.println("Area of Circle: "+area_circle);		
+	}
+}
