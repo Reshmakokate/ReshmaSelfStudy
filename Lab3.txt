@@ -1,0 +1,130 @@
+package batchD0454;
+
+public class Lab3 {
+	public static void main(String[] args) {
+		// Byte
+        byte byteMin = Byte.MIN_VALUE; // Minimum value for byte
+        byte byteMax = Byte.MAX_VALUE; // Maximum value for byte
+        System.out.println("byte: Min = " + byteMin + ", Max = " + byteMax);
+
+        // Short
+        short shortMin = Short.MIN_VALUE; // Minimum value for short
+        short shortMax = Short.MAX_VALUE; // Maximum value for short
+        System.out.println("short: Min = " + shortMin + ", Max = " + shortMax);
+
+        // Int
+        int intMin = Integer.MIN_VALUE; // Minimum value for int
+        int intMax = Integer.MAX_VALUE; // Maximum value for int
+        System.out.println("int: Min = " + intMin + ", Max = " + intMax);
+
+        // Long
+        long longMin = Long.MIN_VALUE; // Minimum value for long
+        long longMax = Long.MAX_VALUE; // Maximum value for long
+        System.out.println("long: Min = " + longMin + ", Max = " + longMax);
+
+        // Float
+        float floatMin = Float.MIN_VALUE; // Minimum value for float
+        float floatMax = Float.MAX_VALUE; // Maximum value for float
+        System.out.println("float: Min = " + floatMin + ", Max = " + floatMax);
+
+        // Double
+        double doubleMin = Double.MIN_VALUE; // Minimum value for double
+        double doubleMax = Double.MAX_VALUE; // Maximum value for double
+        System.out.println("double: Min = " + doubleMin + ", Max = " + doubleMax);
+
+        // Char
+        char charMin = Character.MIN_VALUE; // Minimum value for char
+        char charMax = Character.MAX_VALUE; // Maximum value for char
+        System.out.println("char: Min = " + (int) charMin + ", Max = " + (int) charMax);
+
+        // Boolean
+        boolean booleanTrue = true;
+        boolean booleanFalse = false;
+        System.out.println("boolean: True = " + booleanTrue + ", False = " + booleanFalse);
+  
+	}
+}
+
+
+
+Output:
+byte: Min = -128, Max = 127
+short: Min = -32768, Max = 32767
+int: Min = -2147483648, Max = 2147483647
+long: Min = -9223372036854775808, Max = 9223372036854775807
+float: Min = 1.4E-45, Max = 3.4028235E38
+double: Min = 4.9E-324, Max = 1.7976931348623157E308
+char: Min = 0, Max = 65535
+boolean: True = true, False = false
+
+
+
+package batchD0454;
+import java.util.Scanner;
+
+public class Lab3_result {
+	 public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter the number of subjects: ");
+	        int numSubjects = scanner.nextInt();
+
+	        // Array to store marks of each subject
+	        int[] marks = new int[numSubjects];
+	        int totalMarks = 0;
+
+	        // Input marks for each subject
+	        for (int i = 0; i < numSubjects; i++) {
+	            System.out.print("Enter marks for subject " + (i + 1) + ": ");
+	            marks[i] = scanner.nextInt();
+
+	            // Check for invalid marks
+	            if (marks[i] < 0 || marks[i] > 100) {
+	                System.out.println("Invalid marks entered. Please enter a value between 0 and 100.");
+	                i--; // Ask for the marks again for the same subject
+	                continue;
+	            }
+
+	            totalMarks += marks[i];
+	        }
+
+	        // Calculate percentage
+	        int maxMarks = numSubjects * 100; // Assuming each subject is out of 100
+	        double percentage = (double) totalMarks / maxMarks * 100;
+
+	        // Determine the result
+	        String result;
+	        if (percentage >= 90) {
+	            result = "Excellent";
+	        } else if (percentage >= 75) {
+	            result = "Very Good";
+	        } else if (percentage >= 50) {
+	            result = "Pass";
+	        } else {
+	            result = "Fail";
+	        }
+
+	        // Output the results
+	        System.out.println("\n--- Result ---");
+	        System.out.println("Total Marks: " + totalMarks);
+	        System.out.println("Percentage: " + percentage + "%");
+	        System.out.println("Result: " + result);
+
+	        scanner.close();
+	 }
+	 
+
+}
+
+
+Output:
+Enter the number of subjects: 3
+Enter marks for subject 1: 90
+Enter marks for subject 2: 88
+Enter marks for subject 3: 95
+
+--- Result ---
+Total Marks: 273
+Percentage: 91.0%
+Result: Excellent
+
