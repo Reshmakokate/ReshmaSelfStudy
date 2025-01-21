@@ -1,0 +1,124 @@
+package batchD0454;
+
+public class Employee 
+{
+		    // Fields for employee details
+		    int id;
+		    String name;
+		    double salary;
+
+		    // Constructor to initialize employee
+		    public Employee(int id, String name, double salary) {
+		        this.id = id;
+		        this.name = name;
+		        this.salary = salary;
+		    }
+
+		    // Method to print employee details
+		    public void printDetails() {
+		        System.out.println("ID: " + id + ", Name: " + name + ", Salary: " + salary);
+		    }
+
+		    // Method to calculate incremented salary
+		    public double calculateIncrement(double incrementPercentage) {
+		        return salary + (salary * incrementPercentage / 100);
+		    }
+
+		    public static void main(String[] args) {
+		        // Create employees
+		        Employee emp1 = new Employee(1, "Alice", 40000);
+		        Employee emp2 = new Employee(2, "Bob", 50000);
+
+		        // Print employee details and incremented salary
+		        emp1.printDetails();
+		        System.out.println("New Salary after 10% increment: " + emp1.calculateIncrement(10));
+		        System.out.println();
+
+		        emp2.printDetails();
+		        System.out.println("New Salary after 15% increment: " + emp2.calculateIncrement(15));
+
+	}
+
+}
+Output:
+ID: 1, Name: Alice, Salary: 40000.0
+New Salary after 10% increment: 44000.0
+
+ID: 2, Name: Bob, Salary: 50000.0
+New Salary after 15% increment: 57500.0
+
+
+
+
+package batchD0454;
+
+public class Student {
+	    // Fields for student details
+	    int id;
+	    String name;
+	    int marks1, marks2, marks3; // Marks for three subjects
+
+	    // Constructor to initialize student details
+	    public Student(int id, String name, int marks1, int marks2, int marks3) {
+	        this.id = id;
+	        this.name = name;
+	        this.marks1 = marks1;
+	        this.marks2 = marks2;
+	        this.marks3 = marks3;
+	    }
+
+	    // Method to calculate total marks
+	    public int calculateTotalMarks() {
+	        return marks1 + marks2 + marks3;
+	    }
+
+	    // Method to calculate percentage
+	    public double calculatePercentage() {
+	        return (calculateTotalMarks() / 3.0);
+	    }
+
+	    // Method to print student details and result
+	    public void printDetails() {
+	        System.out.println("Student ID: " + id);
+	        System.out.println("Student Name: " + name);
+	        System.out.println("Marks: " + marks1 + ", " + marks2 + ", " + marks3);
+	        System.out.printf("Percentage: %.2f%%\n", calculatePercentage());
+	        System.out.println("Result: " + (calculatePercentage() >= 40 ? "Pass" : "Fail"));
+	        System.out.println();
+	    }
+
+	    public static void main(String[] args) {
+	        // Create multiple students
+	        Student student1 = new Student(1, "Alice", 85, 90, 88);
+	        Student student2 = new Student(2, "Bob", 40, 50, 45);
+	        Student student3 = new Student(3, "Charlie", 30, 25, 35);
+
+	        // Print details for each student
+	        student1.printDetails();
+	        student2.printDetails();
+	        student3.printDetails();
+	    }
+
+
+}
+
+
+Output:
+Student ID: 1
+Student Name: Alice
+Marks: 85, 90, 88
+Percentage: 87.67%
+Result: Pass
+
+Student ID: 2
+Student Name: Bob
+Marks: 40, 50, 45
+Percentage: 45.00%
+Result: Pass
+
+Student ID: 3
+Student Name: Charlie
+Marks: 30, 25, 35
+Percentage: 30.00%
+Result: Fail
+
