@@ -1,0 +1,64 @@
+package batchD0454;
+
+public class java_architecture {
+	public static void main(String[] args) {
+		System.out.println("HELLO WORLD");
+		}
+}
+
+Output:
+HELLO WORLD
+
+
+
+package batchD0454;
+
+public class java_architecture {
+	public static void main(String[] args) {
+		// Byte - 8-bit signed integer
+        byte byteValue = 127; // Range: -128 to 127
+        System.out.println("Byte Value: " + byteValue);
+
+        // Short - 16-bit signed integer
+        short shortValue = 32767; // Range: -32,768 to 32,767
+        System.out.println("Short Value: " + shortValue);
+
+        // Int - 32-bit signed integer
+        int intValue = 2147483647; // Range: -2^31 to 2^31-1
+        System.out.println("Int Value: " + intValue);
+
+        // Long - 64-bit signed integer
+        long longValue = 9223372036854775807L; // Range: -2^63 to 2^63-1
+        System.out.println("Long Value: " + longValue);
+
+        // Float - 32-bit floating-point number
+        float floatValue = 3.14f; // Approximate range: ±3.40282347E+38F
+        System.out.println("Float Value: " + floatValue);
+
+        // Double - 64-bit floating-point number
+        double doubleValue = 3.141592653589793; // Approximate range: ±1.79769313486231570E+308
+        System.out.println("Double Value: " + doubleValue);
+
+        // Char - 16-bit Unicode character
+        char charValue = 'A'; // Range: '\u0000' to '\uffff'
+        System.out.println("Char Value: " + charValue);
+
+        // Boolean - true or false
+        boolean booleanValue = true; // Only two possible values: true and false
+        System.out.println("Boolean Value: " + booleanValue);
+		}
+}
+
+
+Output:
+Byte Value: 127
+Short Value: 32767
+Int Value: 2147483647
+Long Value: 9223372036854775807
+Float Value: 3.14
+Double Value: 3.141592653589793
+Char Value: A
+Boolean Value: true
+
+
+
