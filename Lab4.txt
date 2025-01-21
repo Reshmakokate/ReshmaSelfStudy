@@ -1,0 +1,93 @@
+package batchD0454;
+
+public class Typecasting {
+
+	public static void main(String[] args) {
+		        // Implicit Type Casting (Widening)
+		        int intVal = 10;
+		        double doubleVal = intVal; // int to double
+		        System.out.println("Implicit Type Casting:");
+		        System.out.println("Original int value: " + intVal);
+		        System.out.println("After casting to double: " + doubleVal);
+
+		        // Explicit Type Casting (Narrowing)
+		        double largeDouble = 9.99;
+		        int narrowedInt = (int) largeDouble; // double to int
+		        System.out.println("\nExplicit Type Casting:");
+		        System.out.println("Original double value: " + largeDouble);
+		        System.out.println("After casting to int: " + narrowedInt);
+
+		        // Casting char to int
+		        char charVal = 'A';
+		        int asciiValue = (int) charVal; // char to int
+		        System.out.println("\nCasting char to int:");
+		        System.out.println("Character: " + charVal);
+		        System.out.println("ASCII value: " + asciiValue);
+
+	}
+
+}
+
+
+Output:
+Implicit Type Casting:
+Original int value: 10
+After casting to double: 10.0
+
+Explicit Type Casting:
+Original double value: 9.99
+After casting to int: 9
+
+Casting char to int:
+Character: A
+ASCII value: 65
+
+
+package batchD0454;
+
+public class Instance_Static_local_variable {
+		
+	    // Instance variable
+	    int instanceVariable = 10;
+
+	    // Static variable
+	    static int staticVariable = 20;
+
+	    public void displayVariables() {
+	        // Local variable
+	        int localVariable = 30;
+
+	        System.out.println("Instance Variable: " + instanceVariable);
+	        System.out.println("Static Variable: " + staticVariable);
+	        System.out.println("Local Variable: " + localVariable);
+	    }
+
+	    public static void main(String[] args) {
+	        // Create an object to access instance variables and methods
+	    	Instance_Static_local_variable  obj = new Instance_Static_local_variable ();
+
+	        // Display variables
+	        obj.displayVariables();
+
+	        // Access and modify static variable
+	        System.out.println("\nAccessing static variable directly from class:");
+	        System.out.println("Static Variable: " +Instance_Static_local_variable .staticVariable);
+
+	        // Modifying the static variable
+	        Instance_Static_local_variable .staticVariable = 50;
+	        System.out.println("Static Variable after modification: " + Instance_Static_local_variable .staticVariable);
+	    }
+
+
+}
+
+
+Output:Instance Variable: 10
+Static Variable: 20
+Local Variable: 30
+
+Accessing static variable directly from class:
+Static Variable: 20
+Static Variable after modification: 50
+
+
