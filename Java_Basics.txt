@@ -1,0 +1,209 @@
+package batchD0454;
+import java.util.Scanner;
+public class java_basics {
+
+	public static void main(String[] args) {
+		        Scanner scanner = new Scanner(System.in);
+
+		        System.out.println("Welcome to the Mini Calculator!");
+		        System.out.println("Select an operation:");
+		        System.out.println("1. Addition (+)");
+		        System.out.println("2. Subtraction (-)");
+		        System.out.println("3. Multiplication (*)");
+		        System.out.println("4. Division (/)");
+		        System.out.print("Enter your choice (1-4): ");
+		        
+		        int choice = scanner.nextInt();
+
+		        System.out.print("Enter the first number: ");
+		        double num1 = scanner.nextDouble();
+
+		        System.out.print("Enter the second number: ");
+		        double num2 = scanner.nextDouble();
+
+		        double result;
+		        switch (choice) {
+		            case 1: // Addition
+		                result = num1 + num2;
+		                System.out.println("Result: " + num1 + " + " + num2 + " = " + result);
+		                break;
+		            case 2: // Subtraction
+		                result = num1 - num2;
+		                System.out.println("Result: " + num1 + " - " + num2 + " = " + result);
+		                break;
+		            case 3: // Multiplication
+		                result = num1 * num2;
+		                System.out.println("Result: " + num1 + " * " + num2 + " = " + result);
+		                break;
+		            case 4: // Division
+		                if (num2 != 0) {
+		                    result = num1 / num2;
+		                    System.out.println("Result: " + num1 + " / " + num2 + " = " + result);
+		                } else {
+		                    System.out.println("Error: Division by zero is not allowed.");
+		                }
+		                break;
+		            default:
+		                System.out.println("Invalid choice! Please select a valid operation.");
+		        }
+
+
+	}
+
+}
+
+
+
+Output:
+1. Welcome to the Mini Calculator!
+Select an operation:
+1. Addition (+)
+2. Subtraction (-)
+3. Multiplication (*)
+4. Division (/)
+Enter your choice (1-4): 3
+Enter the first number: 5
+Enter the second number: 4
+Result: 5.0 * 4.0 = 20.0
+
+2.  Welcome to the Mini Calculator!
+Select an operation:
+1. Addition (+)
+2. Subtraction (-)
+3. Multiplication (*)
+4. Division (/)
+Enter your choice (1-4): 5
+Enter the first number: 23
+Enter the second number: 34
+Invalid choice! Please select a valid operation.
+
+
+
+
+package batchD0454;
+import java.util.Scanner;
+
+public class banking_application {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        double balance = 0.0; // Initial balance
+
+        System.out.println("Welcome to the Banking Application!");
+
+        while (true) {
+            // Display menu
+            System.out.println("\nPlease choose an option:");
+            System.out.println("1. Deposit");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Check Balance");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1: // Deposit
+                    System.out.print("Enter the amount to deposit: ");
+                    double depositAmount = scanner.nextDouble();
+                    if (depositAmount > 0) {
+                        balance += depositAmount;
+                        System.out.println("Amount deposited successfully! Current balance: " + balance);
+                    } else {
+                        System.out.println("Invalid deposit amount. Please enter a positive number.");
+                    }
+                    break;
+
+                case 2: // Withdraw
+                    System.out.print("Enter the amount to withdraw: ");
+                    double withdrawAmount = scanner.nextDouble();
+                    if (withdrawAmount > 0 && withdrawAmount <= balance) {
+                        balance -= withdrawAmount;
+                        System.out.println("Amount withdrawn successfully! Current balance: " + balance);
+                    } else if (withdrawAmount > balance) {
+                        System.out.println("Insufficient balance. Current balance: " + balance);
+                    } else {
+                        System.out.println("Invalid withdrawal amount. Please enter a positive number.");
+                    }
+                    break;
+
+                case 3: // Check Balance
+                    System.out.println("Your current balance is: " + balance);
+                    break;
+
+                case 4: // Exit
+                    System.out.println("Thank you for using the Banking Application. Goodbye!");
+                    scanner.close();
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invalid choice! Please select a valid option.");
+            }
+        }
+	}
+
+}
+
+
+Output:
+1. 
+ Welcome to the Banking Application!
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 1
+Enter the amount to deposit: 1000
+Amount deposited successfully! Current balance: 1000.0
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 3
+Your current balance is: 1000.0
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 2
+Enter the amount to withdraw: 500
+Amount withdrawn successfully! Current balance: 500.0
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 3
+Your current balance is: 500.0
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 4
+Thank you for using the Banking Application. Goodbye!
+
+2.
+Welcome to the Banking Application!
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 5
+Invalid choice! Please select a valid option.
+
+Please choose an option:
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 
