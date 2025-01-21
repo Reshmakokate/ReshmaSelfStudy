@@ -1,0 +1,62 @@
+public class BreakContinueDemo {
+    public static void main(String[] args) {
+        System.out.println("Demonstrating 'break':");
+        for (int i = 1; i <= 10; i++) {
+            if (i == 6) {
+                System.out.println("Break encountered! Exiting the loop.");
+                break; // Exit the loop when i equals 6
+            }
+            System.out.println("Number: " + i);
+        }
+
+        System.out.println("\nDemonstrating 'continue':");
+        for (int i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                continue; // Skip the current iteration if the number is even
+            }
+            System.out.println("Odd Number: " + i);
+        }
+    }
+}
+
+
+Output:
+Demonstrating 'break':
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5
+Break encountered! Exiting the loop.
+
+Demonstrating 'continue':
+Odd Number: 1
+Odd Number: 3
+Odd Number: 5
+Odd Number: 7
+Odd Number: 9
+
+
+package batchD0454;
+public class Starpattern {
+	    public static void main(String[] args) {
+	        int rows = 4; // Number of rows in the pattern
+
+	        for (int i = 1; i <= rows; i++) {
+	            // Print leading spaces
+	            for (int j = i; j < rows; j++) {
+	                System.out.print("   ");
+	            }
+
+	            // Print stars with spaces in between
+	            for (int k = 1; k <= i; k++) {
+	                System.out.print(" *  ");
+	            }
+
+	            // Move to the next line
+	            System.out.println();
+	        }
+	    }
+}
+
+
