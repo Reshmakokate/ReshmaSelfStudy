@@ -1,0 +1,75 @@
+package batchD0454;
+import java.util.Scanner;
+public class Leapyear {
+	    public static void main(String[] args) {
+	        // Create a Scanner object for user input
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Prompt user to enter a year
+	        System.out.print("Enter a year: ");
+	        int year = scanner.nextInt();
+
+	        // Check if the year is a leap year
+	        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+	            System.out.println(year + " is a leap year.");
+	        } else {
+	            System.out.println(year + " is not a leap year.");
+	        }
+
+	        // Close the scanner
+	        scanner.close();
+	    }
+
+
+}
+
+Output:
+
+Enter a year: 2004
+2004 is a leap year.
+
+Enter a year: 2022
+2022 is not a leap year.
+
+
+
+package batchD0454;
+import java.util.Scanner;
+
+public class Reversenum {
+	    public static void main(String[] args) {
+	        // Create a Scanner object for user input
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Prompt user to enter a number
+	        System.out.print("Enter a number: ");
+	        int number = scanner.nextInt();
+
+	        // Initialize variables for reverse and remainder
+	        int reverse = 0;
+
+	        // Reverse the number
+	        while (number != 0) {
+	            int remainder = number % 10; // Get the last digit
+	            reverse = reverse * 10 + remainder; // Append the digit to reverse
+	            number /= 10; // Remove the last digit
+	        }
+
+	        // Print the reversed number
+	        System.out.println("Reversed number: " + reverse);
+
+	        // Close the scanner
+	        scanner.close();
+	    }
+	
+
+}
+
+
+Output:
+Enter a number: 564
+Reversed number: 465
+
+Enter a number: 1005
+Reversed number: 5001
+
