@@ -1,0 +1,86 @@
+package batchD0454;
+import java.util.Scanner;
+public class Greatnum {
+	    public static void main(String[] args) {
+	        // Create a Scanner object for user input
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Prompt the user to enter three integers
+	        System.out.print("Enter the first number: ");
+	        int num1 = scanner.nextInt();
+	        System.out.print("Enter the second number: ");
+	        int num2 = scanner.nextInt();
+	        System.out.print("Enter the third number: ");
+	        int num3 = scanner.nextInt();
+
+	        // Determine the greatest number
+	        int greatest;
+	        if (num1 >= num2 && num1 >= num3) {
+	            greatest = num1;
+	        } else if (num2 >= num1 && num2 >= num3) {
+	            greatest = num2;
+	        } else {
+	            greatest = num3;
+	        }
+
+	        // Print the greatest number
+	        System.out.println("The greatest number is: " + greatest);
+
+	        // Close the scanner
+	        scanner.close();
+	    }
+}
+
+
+Output:
+Enter the first number: 30
+Enter the second number: 75
+Enter the third number: 22
+The greatest number is: 75
+
+Enter the first number: 25
+Enter the second number: 10
+Enter the third number: 25
+The greatest number is: 25
+
+
+package batchD0454;
+import java.util.Scanner;
+public class Armstrongnum {
+	    public static void main(String[] args) {
+	        // Create a Scanner object for user input
+	        Scanner scanner = new Scanner(System.in);
+
+	        // Prompt user to enter a number
+	        System.out.print("Enter a number: ");
+	        int number = scanner.nextInt();
+
+	        // Store the original number
+	        int originalNumber = number;
+	        int result = 0;
+
+	        // Calculate the sum of the cubes of its digits
+	        while (number != 0) {
+	            int digit = number % 10; // Extract the last digit
+	            result += Math.pow(digit, 3); // Add cube of the digit to result
+	            number /= 10; // Remove the last digit
+	        }
+
+	        // Check if the number is an Armstrong number
+	        if (result == originalNumber) {
+	            System.out.println(originalNumber + " is an Armstrong number.");
+	        } else {
+	            System.out.println(originalNumber + " is not an Armstrong number.");
+	        }
+
+	        // Close the scanner
+	        scanner.close();
+	    }
+}
+
+Output:
+Enter a number: 153
+153 is an Armstrong number.
+
+Enter a number: 224
+224 is not an Armstrong number.
